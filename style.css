@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Outfit',sans-serif;
+    background:linear-gradient(135deg,#fff0f5,#ffe4e1);
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 30px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:70px;
+    animation:fadeIn 1.2s ease;
+}
+
+h1{
+    font-size:3em;
+    font-weight:300;
+}
+
+.subtitle{
+    color:#777;
+    margin-top:10px;
+}
+
+.heart-beat{
+    color:#ff4d6d;
+    animation:beat 1.5s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+.polaroid-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+.polaroid{
+    width:280px;
+    background:#fff;
+    padding:20px 20px 60px;
+    border-radius:10px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.polaroid:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 25px 60px rgba(0,0,0,0.3);
+}
+
+.polaroid-image{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.polaroid-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.polaroid:hover img{
+    transform:scale(1.1);
+}
+
+.polaroid-caption{
+    margin-top:15px;
+    font-family:'Caveat',cursive;
+    font-size:1.4em;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    margin-top:60px;
+    color:#999;
+}
+
+/* Floating button */
+.floating-heart-btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    border-radius:50%;
+    background:#ff4d6d;
+    color:white;
+
+    font-size:32px;
+    line-height:1;
+
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(255,77,109,0.4);
+    transition:0.3s ease;
+}
+
+.floating-heart-btn:hover{
+    transform:scale(1.15) rotate(10deg);
+}
+
+/* Modal */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.modal.active{
+    opacity:1;
+    pointer-events:all;
+}
+
+.modal-content{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    max-width:400px;
+    animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.7);}
+    to{transform:scale(1);}
+}
+
+button{
+    margin-top:20px;
+    padding:10px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}

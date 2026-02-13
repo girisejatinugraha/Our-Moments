@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Moments</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Our Moments <span class="heart-beat">♥</span></h1>
+        <p class="subtitle">MOMEN BERSAMA "GIRI & WELLY"</p>
+    </header>
+
+    <section class="polaroid-gallery">
+
+        <div class="polaroid" onclick="showModal(0)">
+            <div class="polaroid-image">
+                <img src="images/kangen 1.jpeg" alt="Moment 1">
+            </div>
+            <div class="polaroid-caption">Kangen Kopi & Space</div>
+        </div>
+
+        <div class="polaroid" onclick="showModal(1)">
+            <div class="polaroid-image">
+                <img src="images/kangen 2.jpeg" alt="Moment 2">
+            </div>
+            <div class="polaroid-caption">Kangen Kopi & Space</div>
+        </div>
+
+        <div class="polaroid" onclick="showModal(2)">
+            <div class="polaroid-image">
+                <img src="images/bakmie 1.jpeg" alt="Moment 3">
+            </div>
+            <div class="polaroid-caption">Bakmie Ayam 58</div>
+        </div>
+
+        <div class="polaroid" onclick="showModal(3)">
+            <div class="polaroid-image">
+                <img src="images/konaro.jpeg" alt="Moment 4">
+            </div>
+            <div class="polaroid-caption">Konaro Coffee & Eatery</div>
+        </div>
+
+        <div class="polaroid" onclick="showModal(4)">
+            <div class="polaroid-image">
+                <img src="images/braga.jpeg" alt="Moment 5">
+            </div>
+            <div class="polaroid-caption">Braga</div>
+        </div>
+
+    </section>
+
+    <footer>
+        Made with ♥ for us
+    </footer>
+
+</div>
+
+<button class="floating-heart-btn" onclick="heartExplosion()">💖</button>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <div class="modal-emoji" id="modalEmoji">💕</div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalMessage"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

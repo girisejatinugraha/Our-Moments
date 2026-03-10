@@ -23,6 +23,11 @@ const modalData = [
     emoji:'💕',
     title:'Braga',
     message:'15 Januari 2026'
+},
+{
+    emoji:'💕',
+    title:'Soomi Soomi Cafe & Dining',
+    message:'9 Maret 2026'
 }
 ];
 
